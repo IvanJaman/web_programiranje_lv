@@ -1,0 +1,168 @@
+.menu nav {
+    display: none;
+}
+
+.menu:hover nav,
+.menu:focus-within nav {
+    display: block;
+    border: 1px solid #d1d1d1;
+    background-color: #e2e2e2;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+#menu-toggle {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 4px solid #333;
+}
+
+.toggle-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #555;
+}
+
+.toggle-box:hover .hidden-content {
+    display: block;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+section {
+    flex: 2;
+    overflow-x: auto;
+}
+
+aside {
+    flex: 1;
+}
+
+.responsive-img {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.responsive-img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.featured-img {
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+article {
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-left: 4px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    margin-top: 0;
+    color: #222;
+}
+
+article p {
+    line-height: 1.5;
+    color: #555;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
