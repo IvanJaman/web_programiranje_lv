@@ -1,33 +1,6 @@
-.menu nav {
-    display: none;
-}
-
-.menu:hover nav,
-.menu:focus-within nav {
-    display: block;
-    border: 1px solid #d1d1d1;
-    background-color: #e2e2e2;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
+body {
+    margin: 0;
     padding: 0;
-}
-
-nav li {
-    margin: 10px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-#menu-toggle {
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
 }
 
 .skip-link {
@@ -40,9 +13,64 @@ nav a {
     z-index: 100;
     text-decoration: none;
 }
-
 .skip-link:focus {
     top: 0;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.menu nav {
+    display: none;
+}
+.menu:hover nav,
+.menu:focus-within nav {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #e2e2e2;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    z-index: 50;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin: 10px 0;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#menu-toggle {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
+
+main {
+    padding: 20px;
 }
 
 table {

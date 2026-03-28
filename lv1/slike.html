@@ -1,135 +1,232 @@
-<!--DODATI ŠTO NEDOSTAJE!-->
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerija filmskih plakata i slika.">
+    <link rel="stylesheet" href="style_slike.css">
+    <link rel="stylesheet" href="slike.css">
+    <title>Galerija slika</title>
+</head>
+<body>
 
-<!-- Slike u galeriji -->
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Preskoči na glavni sadržaj</a>
 
+    <header>
+        <h1>Galerija filmova</h1>
+        <div class="menu">
+            <button id="menu-toggle" aria-expanded="false">☰ Izbornik</button>
+            <nav aria-label="Primarna navigacija">
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="grafikon.html">Grafikon</a></li>
+                    <li><a href="slike.html">Slike</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main id="main-content">
+        <section class="galerija">
+            <h1>Galerija slika</h1>
 
+            <div class="img-gallery-magnific">
 
+                <!-- 
+                    CSS-only lightbox: svaka slika ima:
+                    1. <a href="#slika-N"> koji aktivira :target na overlayu
+                    2. overlay div s id="slika-N" koji se prikazuje samo kad je :target aktivan
+                    3. <a href="#"> unutar overlaya služi kao "close" gumb
+                -->
 
-<section class="galerija"> 
-	<h1>Galerija slika</h1>
+                <!-- Slika 1 -->
+                <div class="magnific-img">
+                    <a href="#slika-1">
+                        <img src="https://unsplash.it/300/200?random=1"
+                             alt="Filmska slika 1"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 1</figcaption>
+                </div>
 
-	<!-- putanja (href) u tagu a je drugačija kad se koristi lightbox od onoga kada želimo da se 
-					 otvori u novom tabu -->
+                <div id="slika-1" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=1" alt="Filmska slika 1 - uvećano">
+                </div>
 
+                <!-- Slika 2 -->
+                <div class="magnific-img">
+                    <a href="#slika-2">
+                        <img src="https://unsplash.it/300/200?random=2"
+                             alt="Filmska slika 2"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 2</figcaption>
+                </div>
 
-	<figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=1" title="1.jpg">
-		  <img src="https://unsplash.it/300/200?random=1" alt="Slika 1">
-		</a>
-		<figcaption>Slika 1</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=2" title="2.jpg">
-		  <img src="https://unsplash.it/300/200?random=2" alt="Slika 2">
-		</a>
-		<figcaption>Slika 2</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=3" title="3.jpg">
-		  <img src="https://unsplash.it/300/200?random=3" alt="Slika 3">
-		</a>
-		<figcaption>Slika 3</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=4" title="4.jpg">
-		  <img src="https://unsplash.it/300/200?random=4" alt="Slika 4">
-		</a>
-		<figcaption>Slika 4</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=5" title="5.jpg">
-		  <img src="https://unsplash.it/300/200?random=5" alt="Slika 5">
-		</a>
-		<figcaption>Slika 5</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=6" title="6.jpg">
-		  <img src="https://unsplash.it/300/200?random=6" alt="Slika 6">
-		</a>
-		<figcaption>Slika 6</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=7" title="7.jpg">
-		  <img src="https://unsplash.it/300/200?random=7" alt="Slika 7">
-		</a>
-		<figcaption>Slika 7</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=8" title="8.jpg">
-		  <img src="https://unsplash.it/300/200?random=8" alt="Slika 8">
-		</a>
-		<figcaption>Slika 8</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=9" title="9.jpg">
-		  <img src="https://unsplash.it/300/200?random=9" alt="Slika 9">
-		</a>
-		<figcaption>Slika 9</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=10" title="10.jpg">
-		  <img src="https://unsplash.it/300/200?random=10" alt="Slika 10">
-		</a>
-		<figcaption>Slika 10</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=11" title="11.jpg">
-		  <img src="https://unsplash.it/300/200?random=11" alt="Slika 11">
-		</a>
-		<figcaption>Slika 11</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=12" title="12.jpg">
-		  <img src="https://unsplash.it/300/200?random=12" alt="Slika 12">
-		</a>
-		<figcaption>Slika 12</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=13" title="13.jpg">
-		  <img src="https://unsplash.it/300/200?random=13" alt="Slika 13">
-		</a>
-		<figcaption>Slika 13</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=14" title="14.jpg">
-		  <img src="https://unsplash.it/300/200?random=14" alt="Slika 14">
-		</a>
-		<figcaption>Slika 14</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=15" title="15.jpg">
-		  <img src="https://unsplash.it/300/200?random=15" alt="Slika 15">
-		</a>
-		<figcaption>Slika 15</figcaption>
-	  </figure>
-	  
-	  <figure class="galerija_slika">
-		<a class="image-popup-vertical-fit" href="https://unsplash.it/900/?random=16" title="16.jpg">
-		  <img src="https://unsplash.it/300/200?random=16" alt="Slika 16">
-		</a>
-		<figcaption>Slika 16</figcaption>
-	  </figure>
-	  
-	
-	  
-</section>
+                <div id="slika-2" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=2" alt="Filmska slika 2 - uvećano">
+                </div>
 
+                <!-- Slika 3 -->
+                <div class="magnific-img">
+                    <a href="#slika-3">
+                        <img src="https://unsplash.it/300/200?random=3"
+                             alt="Filmska slika 3"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 3</figcaption>
+                </div>
 
+                <div id="slika-3" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=3" alt="Filmska slika 3 - uvećano">
+                </div>
 
+                <!-- Slika 4 -->
+                <div class="magnific-img">
+                    <a href="#slika-4">
+                        <img src="https://unsplash.it/300/200?random=4"
+                             alt="Filmska slika 4"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 4</figcaption>
+                </div>
 
+                <div id="slika-4" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=4" alt="Filmska slika 4 - uvećano">
+                </div>
 
+                <!-- Slika 5 -->
+                <div class="magnific-img">
+                    <a href="#slika-5">
+                        <img src="https://unsplash.it/300/200?random=5"
+                             alt="Filmska slika 5"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 5</figcaption>
+                </div>
+
+                <div id="slika-5" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=5" alt="Filmska slika 5 - uvećano">
+                </div>
+
+                <!-- Slika 6 -->
+                <div class="magnific-img">
+                    <a href="#slika-6">
+                        <img src="https://unsplash.it/300/200?random=6"
+                             alt="Filmska slika 6"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 6</figcaption>
+                </div>
+
+                <div id="slika-6" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=6" alt="Filmska slika 6 - uvećano">
+                </div>
+
+                <!-- Slika 7 -->
+                <div class="magnific-img">
+                    <a href="#slika-7">
+                        <img src="https://unsplash.it/300/200?random=7"
+                             alt="Filmska slika 7"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 7</figcaption>
+                </div>
+
+                <div id="slika-7" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=7" alt="Filmska slika 7 - uvećano">
+                </div>
+
+                <!-- Slika 8 -->
+                <div class="magnific-img">
+                    <a href="#slika-8">
+                        <img src="https://unsplash.it/300/200?random=8"
+                             alt="Filmska slika 8"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 8</figcaption>
+                </div>
+
+                <div id="slika-8" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=8" alt="Filmska slika 8 - uvećano">
+                </div>
+
+                <!-- Slika 9 -->
+                <div class="magnific-img">
+                    <a href="#slika-9">
+                        <img src="https://unsplash.it/300/200?random=9"
+                             alt="Filmska slika 9"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 9</figcaption>
+                </div>
+
+                <div id="slika-9" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=9" alt="Filmska slika 9 - uvećano">
+                </div>
+
+                <!-- Slika 10 -->
+                <div class="magnific-img">
+                    <a href="#slika-10">
+                        <img src="https://unsplash.it/300/200?random=10"
+                             alt="Filmska slika 10"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 10</figcaption>
+                </div>
+
+                <div id="slika-10" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=10" alt="Filmska slika 10 - uvećano">
+                </div>
+
+                <!-- Slika 11 -->
+                <div class="magnific-img">
+                    <a href="#slika-11">
+                        <img src="https://unsplash.it/300/200?random=11"
+                             alt="Filmska slika 11"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 11</figcaption>
+                </div>
+
+                <div id="slika-11" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=11" alt="Filmska slika 11 - uvećano">
+                </div>
+
+                <!-- Slika 12 -->
+                <div class="magnific-img">
+                    <a href="#slika-12">
+                        <img src="https://unsplash.it/300/200?random=12"
+                             alt="Filmska slika 12"
+                             loading="lazy">
+                    </a>
+                    <figcaption>Slika 12</figcaption>
+                </div>
+
+                <div id="slika-12" class="lightbox">
+                    <a href="#" class="lightbox-close" aria-label="Zatvori">✕</a>
+                    <img src="https://unsplash.it/900/600?random=12" alt="Filmska slika 12 - uvećano">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Web Programiranje. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>

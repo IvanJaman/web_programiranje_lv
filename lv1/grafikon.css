@@ -1,18 +1,107 @@
 :root {
-    --bar-max-height: 200px; 
+    --bar-max-height: 400px; 
     --bar-color: #3498db;
     --bar-hover-color: #2c80b4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.menu nav {
+    display: none;
+}
+.menu:hover nav,
+.menu:focus-within nav {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #e2e2e2;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    z-index: 50;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin: 10px 0;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#menu-toggle {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.bar-chart {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bar-chart .chart {
     display: flex;
     align-items: flex-end; 
+    justify-content: center; 
     gap: 10px;
-    padding: 20px;
+    padding: 40px 20px 0 20px;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .bar-chart .bar {
-    width: 40px;
+    width: 50px;
     height: calc(var(--height) / 10 * var(--bar-max-height)); 
     background-color: var(--bar-color);
     color: white;
@@ -22,18 +111,29 @@
     justify-content: center;
     border-radius: 5px 5px 0 0;
     transition: background-color 0.3s, height 1s;
+    position: relative;
+    transform-origin: bottom; 
+    animation: grow 1s forwards;
 }
 
-.bar {
-    animation: grow 1s forwards;
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+footer p {
+    margin: 0;
 }
 
 @keyframes grow {
     from {
-        height: 0;
+        transform: scaleY(0);
     }
     to {
-        height: calc(var(--height) / 10 * var(--bar-max-height));
+        transform: scaleY(1);
     }
 }
 
