@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/style_slike.css">
+    <link rel="stylesheet" href="/styles/slike.css">
+
+    <title>Galerija slika</title>
+</head>
+<body>
+
+<header>
+    <h1>Galerija filmova</h1>
+</header>
+
+<main>
+    <section class="galerija">
+
+        <div class="img-gallery-magnific">
+
+            <% images.forEach(img => { %>
+
+                <div class="magnific-img">
+                    <a href="#<%= img.id %>">
+                        <img src="<%= img.url %>"
+                             alt="<%= img.title %>"
+                             loading="lazy">
+                    </a>
+                    <figcaption><%= img.title %></figcaption>
+                </div>
+
+                <div id="<%= img.id %>" class="lightbox">
+                    <a href="#" class="lightbox-close">✕</a>
+                    <img src="<%= img.url %>" alt="<%= img.title %> enlarged">
+                </div>
+
+            <% }) %>
+
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>
