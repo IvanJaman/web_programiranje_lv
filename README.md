@@ -1,1 +1,1 @@
-KarloBuhinjak was signed in on labs computer, so 'he' commited the code for lv1, but it was actually me.
+KarloBuhinjak, karlolac were signed in on labs computer, so 'they' commited the code for lvs, but it was actually me.
