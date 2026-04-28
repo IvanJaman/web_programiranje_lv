@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO meta tag: -->
+        <meta name="description" content="Web stranica o filmovima s popisom i osnovnim informacijama o filmovima.">
+        
+        <!-- CSS file -->
+        <link rel="stylesheet" href="styles/index.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <title>Filmovi</title> 
+    </head>
+	<body>
+        <a href="#main-content" class="skip-link">Preskoči na glavni sadržaj</a>
+		<header>
+            <h1>Filmovi</h1>
+
+            <div class="menu">
+                <button id="kosarica-btn" aria-expanded="false">🛒 Košarica</button>
+
+                <button id="menu-toggle" aria-expanded="false">☰ Izbornik</button>
+
+                <div id="kosarica-dropdown" class="kosarica-dropdown hidden">
+                    <h3>Košarica</h3>
+                    <ul id="kosarica-lista"></ul>
+                    <button id="potvrdi-kosaricu">Potvrdi</button>
+                </div>
+
+                <nav aria-label="Primarna navigacija">
+                    <ul>
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="/grafikon">Grafikon</a></li>
+                        <li><a href="/slike">Slike</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+		<main id="main-content">
+            <h1>Popis Filmova</h1>
+
+            <div class="container">
+                <section id="filteri">
+                    <h2>Filtriranje</h2>
+
+                    <select id="filter-zanr">
+                        <option value="">Svi žanrovi</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                    </select>
+
+                    <input type="number" id="filter-godina" placeholder="Godina od (npr. 2000)">
+
+                    <label>
+                        Minimalna ocjena:
+                        <input type="range" id="filter-ocjena" min="0" max="10" step="0.1" value="0">
+                        <span id="ocjena-vrijednost">0</span>
+                    </label>
+
+                    <button id="filter-btn">Filtriraj</button>
+                </section>
+                <div class="content-row">
+                    <section>
+                        <h2>Tablica filmova</h2>
+
+                        <table id="filmovi-tablica">
+                            <thead>
+                                <tr>
+                                    <th>Naslov</th>
+                                    <th>Godina</th>
+                                    <th>Žanr</th>
+                                    <th>Trajanje</th>
+                                    <th>Ocjena</th>
+                                    <th>Redatelj</th>
+                                    <th>Zemlja porijekla</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody id="film-table-body">
+                            </tbody>
+                        </table>
+
+                        <div class="toggle-box">
+                            <button class="toggle-btn">Prikaži više</button>
+
+                            <div class="hidden-content">
+                                <p>Ova stranica prikazuje popis filmova s osnovnim informacijama kao što su godina, žanr i ocjena.</p>
+                                <p>Podaci su informativnog karaktera i služe za demonstraciju HTML i CSS tehnika.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <aside> 
+                        <h2>Istaknuto</h2>
+
+                        <p><strong>Film tjedna:</strong> The Dark Knight (2008)</p>
+                        <p>Žanr: Akcijski</p>
+                        <p>Ocjena: ⭐ 9.1</p>
+
+                        <img src="darkknight.jpg" alt="Plakat filma The Dark Knight" class="responsive-img featured-img">
+                    </aside>
+                </div>
+            </div>
+
+            <article>
+                <h2>Najnovije vijesti</h2>
+                <p>Ovdje se nalazi članak s važnim informacijama.</p>
+            </article>
+        </main>
+		<footer>
+		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+		</footer>
+        <script src="scripts.js"></script>
+	</body>
+	</html>
